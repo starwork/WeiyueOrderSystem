@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.headBar{
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	text-align:center;
+	height:40px;
+	background-color:#CF0A59;
+	z-index:1;
+	color:white
+}
+
+
+#mainContent{
+	margin-top:50px;
+}
+
+#orderInfo{
+	margin-left:10px;
+}
+
+#orderInfo img{
+	width:35px;
+	float:left;
+}
+
+#orderInfo > div{
+	margin-left:40px;
+	margin-bottom:10px;
+}
+
+#orderInfo > div > img{
+	width:5px;
+	position:absolute;
+	left:55;
+	top:55
+}
+
+#orderInfo span{
+	margin-left:20px;
+	font-size:13px;
+}
+
+#orderInfo setting{
+	color:#CF0A59;
+	cursor:pointer;
+}
+
+#orderInfo > div > div{
+	margin-top:3px;
+	font-size:13px;
+}
+
+#orderInfo > div > div font{
+	font-weight:bold;
+	font-size:15px;
+}
+
+#dishList{
+	width:100%;
+	border-spacing:0;
+}
+
+#dishList tr{
+	text-align:center;
+	height:35px
+}
+
+#dishList tr:nth-child(1){
+	font-size:15px;
+	color:white;
+	height:25px;
+	background:#909090;
+}
+
+#dishList th{
+	position:relative;
+}
+
+#dishList th font{
+	position:absolute;
+	right:0;
+}
+
+#dishList td{
+	position:relative;
+}
+
+
+#sumBar{
+	margin-top:15px;
+	width:100%;
+	color:#CF0A59;
+}
+
+.holdPlace{
+	width:100%;
+	height:60px;
+}
+
+#payButton{
+	border-radius:6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	padding:1px 10px 3px 6px;
+	color:white;
+	background:#D31C64;
+	width:70px;
+	position:relative;
+	display:inline-block;
+	font-weight:normal;
+	cursor: pointer;	
+}
+
+#payButton img{
+	width:18px;
+	position:relative;
+	top:3px;
+	left:0px;
+}

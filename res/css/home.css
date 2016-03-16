@@ -1,0 +1,390 @@
+/*#CF0A59  玫瑰红色*/
+/*#E0E0E0  浅阴影*/
+/*#808080  深阴影*/
+
+body {
+    margin: 0; /*为让第一个carousel中的图片与窗体无空隙*/
+}
+
+#allWrapper {
+    max-width: 600px;
+    margin: 0 auto 0 auto;
+}
+
+/*底部导航栏*/
+table.navBar {
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    height: 30px;
+    background-color: #FFFFFF;
+    -moz-box-shadow: 0px -3px 3px #E0E0E0;
+    box-shadow: 0px -3px 3px #E0E0E0;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.8);
+    background-color: #FFF\9;
+    filter: alpha(opacity=80);
+}
+
+/*用于弹窗背景的透明黑幕*/
+.mask {
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 2;
+    display: none;
+}
+
+/*首页选择桌号和人数的弹窗*/
+.popWindow {
+    width: 260px;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    margin-left: -130px;
+    background: white;
+    z-index: 2;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.7);
+    background-color: #FFF\9;
+    filter: alpha(opacity=70);
+    display: none;
+}
+
+/*松鼠logo*/
+.popWindow > img:nth-child(1) {
+    margin-top: 5px;
+    width: 100px;
+}
+
+/*welcome*/
+.popWindow > div:nth-child(2) {
+    font-weight: bold;
+    font-size: 250%;
+    color: #CF0A59;
+    margin-top: -10px;
+}
+
+.sliderBegin {
+    width: 1px;
+    height: 1px
+}
+
+.sliderEnd {
+    width: 1px;
+    height: 1px
+}
+
+/*欢迎使用松鼠点餐系统*/
+.popWindow > div:nth-child(3) {
+    color: #808080;
+    margin-bottom: 15px;
+    font-size: 80%;
+}
+
+.popWindow > hr {
+    width: 80%;
+    background: #808080;
+    border: 1px solid #808080;
+    -webkit-border-radius: 5%;
+    -moz-border-radius: 5%;
+    border-radius: 5%;
+}
+
+.sliderWrapper {
+    margin-top: 30px;
+    position: relative;
+}
+
+.markSlider button {
+    width: 25px;
+    height: 25px;
+    background: #E0E0E0;
+    border: 1px solid #ccc;
+    color: #FF0099;
+    font-size: 9px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0;
+
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+/*选人数的滑动条*/
+.popWindow > div:nth-child(6) {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.sliderWrapper > hr {
+    width: 96%;
+    background: #CF0A59;
+    border: 1px solid #CF0A59;
+    -webkit-border-radius: 5%;
+    -moz-border-radius: 5%;
+    border-radius: 5%;
+    position: absolute;
+    top: 3px;
+    left: 2%;
+    z-index: -1;
+}
+
+.focusCircle {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+
+    z-index: 2;
+    background: #CF0A59;
+    color: white;
+    border: 3px solid white;
+    font-size: 20px;
+
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    margin-left: -20px;
+}
+
+#startButton {
+    margin: 15px;
+    padding: 5px 15px 5px 15px;
+    width: 80px;
+    background: #CF0A59;
+    color: white;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+div.wrapper {
+    position: relative;
+}
+
+.markCarousel .item > img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/*标准浏览器 只需这句*/
+.description {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    padding-top: 10px;
+    padding-left: 25px;
+    width: 100%;
+    height: 80px;
+    color: white;
+    background: #808080;
+    background-color: rgba(128, 128, 128, 0.7);
+    background-color: #FFF\9;
+    filter: alpha(opacity=70);
+}
+
+.description > div:nth-child(1) {
+    font-size: 120%;
+    margin-bottom: 0px;
+}
+
+.description > div:nth-child(2) {
+    font-size: 80%;;
+    margin-left: 20px;
+}
+
+.addDish {
+    position: absolute;
+    bottom: 5px;
+    right: 15px;
+    cursor: pointer;
+    z-index: 1;
+    width: 80px;
+    height: 80px;
+}
+
+.addDish .addButton {
+    width: 75px;
+    height: 75px;
+    background: #CF0A59;
+    color: white;
+    font-size: 22px;
+    text-align: center;
+    margin-top: 5px;
+
+    border: 0px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.item button:not(.addButton) {
+    position: absolute;
+    top: 1px;
+    right: 4px;
+
+    width: 20px;
+    height: 20px;
+    background: #CF0A59;
+    border: 1px solid #CF0A59;
+    color: #FFF;
+    font-size: 9px;
+
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+
+    display: none;
+}
+
+.beChoiced button {
+    display: inline !important;
+}
+
+#pointNavHolder {
+    position: absolute;
+    bottom: 3px;
+    left: 0px;
+    width: 100%;
+
+    color: white;
+}
+
+#owl-recommend {
+    margin-top: 2px;
+}
+
+#owl-recommend .item {
+    margin: 8px;
+    cursor: pointer;
+}
+
+#owl-recommend .item > div {
+    font-size: 80%;
+    margin-left: 10px;
+}
+
+#owl-recommend .item > div > div {
+    color: #CF0A59;
+    margin-top: 5px;
+    margin-bottom: 3px;
+}
+
+#owl-recommend > div {
+    position: relative;
+}
+
+/* 导航箭头*/
+#leftArrowHolder {
+    position: absolute; /* absolute position (so we can position it where we want)*/
+    bottom: 20px; /* position will be on bottom */
+    left: 3px;
+    font-weight: bold;
+    color: #D31C64;
+    display: none;
+}
+
+#rightArrowHolder {
+    position: absolute; /* absolute position (so we can position it where we want)*/
+    bottom: 20px; /* position will be on bottom */
+    font-weight: bold;
+    color: #D31C64;
+    right: 3px;
+}
+
+/*#rightArrowHolder img{
+	width:10px;
+}*/
+
+#discountInfo {
+    margin-left: 8px;
+    margin-top: 8px;
+    margin-bottom: 85px; /*防止信息被底部导航条挡住*/
+    font-size: 80%
+}
+
+#discountInfo > img {
+    float: left;
+    width: 60px;
+}
+
+#discountInfo > div {
+    margin-left: 60px;
+}
+
+#discountInfo > div > div {
+    margin-top: 5px;
+}
+
+.navBar th img {
+    height: 30px;
+}
+
+.navBar th p {
+    font-size: 10px;
+    margin-top: 2px;
+    margin-left: 1px;
+    margin-bottom: 2px;
+}
+
+.navBar th:nth-child(1) p {
+    color: #D31C64;
+}
+
+.demoMark {
+    position: absolute;
+    top: 0;
+    padding: 10px;
+    width: 200px;
+    background: -moz-linear-gradient(left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    background: -o-linear-gradient(left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    color: #D31C64;
+    font-size: 18px;
+}
+
+.recommendMark {
+    position: absolute;
+    padding: 3px;
+    top: 8px;
+    left: 8px;
+    width: 150px;
+    background: -moz-linear-gradient(left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    background: -o-linear-gradient(left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    color: #D31C64;
+}
+
+.spcialPrice {
+    font-size: 25px;
+}
+
+.likeMark {
+    position: relative;
+    font-size: 12px;
+    margin-left: 15px;
+}
+
+.likeMark img {
+    width: 17px;
+    position: relative;
+    top: 2px;
+    margin-right: 3px;
+}

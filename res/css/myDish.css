@@ -1,0 +1,422 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.headBar{
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	text-align:center;
+	height:40px;
+	background-color:#CF0A59;
+	z-index:1;
+	color:white
+}
+
+/*底部导航栏*/
+table.navBar
+{
+	position:fixed;
+	bottom:0px;
+	left:0px;
+	width:100%;
+	text-align:center;
+	height:30px;
+	background-color:#FFFFFF;
+	-moz-box-shadow: 0px -3px 3px #E0E0E0; /* 老的 Firefox */
+	box-shadow: 0px -3px 3px #E0E0E0;
+	z-index:1;
+	background-color:rgba(255,255,255,0.8);  /*标准浏览器 只需这句*/
+	background-color:#FFF\9;      /*IE 系列*/
+	filter:alpha(opacity=80);     /*IE 系列*/
+}
+
+.navBar th img{
+	height:30px;
+}
+
+.navBar th p{
+	font-size:10px;
+	margin-top:2px;
+	margin-left:1px;
+	margin-bottom:2px;
+}
+
+.navBar th:nth-child(3) p{
+	color:#D31C64;
+}
+
+#mainContent{
+	margin-top:50px;
+}
+
+#orderInfo{
+	margin-left:10px;
+	
+}
+
+#orderInfo img{
+	width:35px;
+	float:left;
+}
+
+#orderInfo > div{
+	margin-left:40px;
+	margin-bottom:10px;
+}
+
+#orderInfo #circleMark{
+	width:5px;
+	height:5px;
+	border-radius:50%;
+	background:#CF0A59;
+	float:left;
+	margin-top:5px;
+}
+
+#orderInfo span{
+	margin-left:5px;
+	font-size:13px;
+}
+
+#orderInfo setting{
+	color:#CF0A59;
+	cursor:pointer;
+}
+
+#orderInfo > div > div:nth-child(3){
+	margin-top:5px;
+	font-size:13px;
+}
+
+#orderInfo > div > div:nth-child(3) font{
+	font-weight:bold;
+	font-size:15px;
+}
+
+#dishList{
+	width:100%;
+	border-spacing:0;
+}
+
+#dishList tr{
+	text-align:center;
+	height:35px
+}
+
+#dishList tr:nth-child(1){
+	font-size:15px;
+	color:white;
+	height:25px;
+	background:#909090;
+}
+
+#dishList th{
+	position:relative;
+}
+
+#dishList th font{
+	position:absolute;
+	right:0;
+}
+
+#dishList td{
+	position:relative;
+}
+
+.trFocus{
+	background:#EEE;
+}
+
+.trFocus div{
+	position:absolute;
+	height:100%;
+	background:#CF0A59;
+	width:5px;
+	left:0;
+	top:0;
+}
+
+#dishList img{
+	cursor:pointer;
+}
+
+#dishList tr img:nth-child(1){/*加号*/
+	margin-right:10px;
+}
+
+#dishList tr img:nth-child(3){/*减号*/
+	margin-left:10px;
+	margin-bottom:4px;
+}
+
+#dishList tr img:nth-child(2){
+	margin-bottom:4px;
+}
+
+#sumBar{
+	margin-top:15px;
+	margin-left:5px;
+	width:100%;
+	font-size:18px;
+	color:#CF0A59;
+}
+
+#sumBar span:nth-child(1){
+	margin-right:10px;
+}
+
+.iconBtn{
+	border-radius:6px;
+	padding:1px 10px 3px 4px;
+	color:white;
+	font-weight:normal;
+	background:#D31C64;
+	width:70px;
+	position:relative;
+	display:inline-block;
+	cursor:pointer;
+}
+
+.iconBtn img{
+	width:18px;
+	position:relative;
+	top:3px;
+	left:0px;
+}
+
+.holdPlace{
+	width:100%;
+	height:60px;
+}
+
+/*用于弹窗背景的透明黑幕*/
+div.mask{
+	width:100%;
+	height:100%;
+	background:black;
+	opacity:0.7;
+	filter:alpha(opacity=70); /* 针对 IE8 以及更早的版本 */
+	position:fixed; /* absolute position (so we can position it where we want)*/
+	left:0px; /* position will be on bottom */
+	top:0px;
+	z-index:2;
+	display:none;
+}
+.popQuery
+{
+	width:220px;
+	position:absolute;
+	top:30%;
+	left:50%;
+	margin-left:-110px;
+	background:white;
+	z-index:2;
+	display:none;
+
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;/* Firefox */
+}
+.popQuery .logo
+{
+	position:absolute;
+	width:90px;
+	top:-30px;
+	left:50%;
+	margin-left:-45px;
+}
+
+.popQuery > div
+{
+	margin:60px 10px 30px 10px;
+	/*font-size:10px;*/
+	text-align:center;
+}
+
+.popQuery table
+{
+	color:white;
+	text-align:center;
+	width:100%;
+	height:35px;
+	border-spacing:0;
+}
+
+.popQuery table tr
+{
+	position:relative
+}
+
+.popQuery table th
+{
+	background:#D31C64;
+	position:relative;
+	cursor:pointer;
+	font-weight:normal;
+}
+
+.popQuery table th:nth-child(1)
+{
+	border-bottom-left-radius:7px;
+}
+
+.popQuery table th:nth-child(2)
+{
+	border-bottom-right-radius:7px;
+}
+.popQuery table th img
+{
+	width:18px;
+	position:relative;
+	left:0px;
+	top:2px
+}
+
+.thFocuseMark/*focuse反馈标记*/
+{
+	position:absolute;
+	width:100%;
+	left:0;
+	bottom:0px;
+	height:5px;
+	background:#D31C64;
+	display:none
+}
+
+.middleLine
+{
+	position:absolute;
+	width:1px;
+	right:0;
+	top:2px;
+	height:31px;
+	background:white
+}
+
+#popSetting
+{
+	width:260px;
+	position:absolute;
+	top:90px;
+	left:50%;
+	margin-left:-130px;
+	background:white;
+	z-index:2;
+
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+
+	background-color:rgba(255,255,255,0.7);
+	background-color:#FFF\9;     
+	filter:alpha(opacity=70);
+	display:none;
+}
+
+.sliderWrapper{
+	margin-top:30px;
+	position:relative;
+}
+
+.markSlider button{
+	width: 25px;
+	height: 25px;     
+	background:#E0E0E0;
+	border: 1px solid #ccc; 
+	color:#FF0099;
+	font-size:9px;
+	font-weight:bold;
+	cursor:pointer;
+
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+}
+
+#popSetting > div:nth-child(1)/*请选择桌号*/
+{
+	margin-top:20px;
+}
+
+
+#popSetting > div:nth-child(3)/*请选择人数*/
+{
+	margin-top:20px;
+}
+
+
+.sliderWrapper > hr{
+	width:96%;
+	background:#CF0A59;
+	border:1px solid #CF0A59;
+	-webkit-border-radius: 5%;
+	-moz-border-radius: 5%;
+	border-radius: 5%;
+	position:absolute;
+	top:10px;
+	left:2%;
+	z-index:-1;
+}
+
+
+.focusCircle{
+	width: 40px;
+	height: 40px;
+    
+	z-index:2;
+	background:#CF0A59;
+	color:white;
+	border:3px solid white;
+	font-size:20px;
+
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+
+	position:absolute;
+	top:-8px;
+	left:50%;
+	margin-left:-20px;
+}
+
+#confirmButton{	
+	margin:30px;
+	border-radius:6px;
+	padding:1px 10px 3px 6px;
+	color:white;
+	background:#D31C64;
+	width:70px;
+	position:relative;
+	display:inline-block;
+	font-weight:normal;
+	cursor: pointer;
+}
+
+#confirmButton img{
+	width:18px;
+	position:relative;
+	top:3px;
+	left:0px;
+}
+
+.sliderBegin
+{
+	width:1px;
+	height:1px
+}
+
+.sliderEnd
+{
+	width:1px;
+	height:1px
+}
+
+
+.icon-font p{
+	font-size:10px;
+	margin-top:2px;
+	margin-left:2px;
+}
